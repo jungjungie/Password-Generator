@@ -32,6 +32,15 @@ var lowerStr = 'abcdefghijklmnopqrstuvwxyz';
 var upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var symbolStr = ['@', '%', '+', '', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
 
+// function check () {
+//   document.getElementById("pwLower").checked
+// }
+// if (document.getElementById("pwLower").checked) {
+//   console.log(lowercaseStr.charAt(Math.floor(Math.random() * 26)));
+// }
+
+// function generatePassword(); 
+
 console.log(lowerStr.charAt(
   Math.floor(
     Math.random() * 26)
@@ -51,12 +60,6 @@ console.log(Math.floor(
     Math.random() * 10)
     );
 
-// function check () {
-//   document.getElementById("pwLower").checked
-// }
-// if (document.getElementById("pwLower").checked) {
-//   console.log(lowercaseStr.charAt(Math.floor(Math.random() * 26)));
-// }
 
 // After all prompts are answered, pw is generated that matches the selected criteria
 // Display pw as either an alert or written on pg
