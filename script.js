@@ -14,18 +14,13 @@ var upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numberStr = '0123456789';
 var symbolStr = '@%+"/\'!#$^?:,)(}{][~-_.';
 
+// Master array based on criteria selection
 var combinedStr = '';
+
+// Password generated based on criteria selection
 var password = '';
 
-// Example
-// var combinedArr = uppercase.concat(numbers, lowercase, symbols);
-
 // Push characters into master array based on user selections
-      // If select lowercase, push lowerStr into combinedArr
-      // If select uppercase, push upperStr into combinedArr
-      // If select numbers, push numberStr into combinedArr
-      // If select symbols, push symbolStr into combinedArr
-
 if ((lowerInput !== true) && (upperInput !== true) && (numberInput !== true) && (symbolInput !== true)) {
   alert("You must select at least one criteria!");
 } 
@@ -44,20 +39,30 @@ if (symbolInput === true) {
 
 console.log(combinedStr);
 
-function generatePassword() {
-      // combinedArr = combinedArr.concat(lowerStr, upperStr);
+console.log(combinedStr.charAt(Math.floor(Math.random() * combinedStr.length)));
 
-// Based on length chosen, create for loop that loops # of length times and randomly pulls from master array & pushes into a new "array" for pw
-for (var i=0; i < lengthInput; i++) {
-  password.push(Math.floor(Math.random) * combinedStr.length)
+// Function creates pw based on length input and criteria selection
+function writePassword() {
+  // var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 }
-return password;
+
+function generatePassword() {
+
+  for (var i=0; i < lengthInput; i++) {
+    password = password + combinedStr.charAt(Math.floor(Math.random() * combinedStr.length));
+    // password.push(combinedStr.charAt(Math.floor(Math.random() * combinedStr.length)))
+  }
+  return password;
+
 }
 // Print the pw to the box
 
 
-generatePassword;
-
+console.log(generatePassword());
+writePassword();
  
   // If no criteria selected, then return error
   // If length not specified, then return error
