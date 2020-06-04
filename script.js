@@ -14,8 +14,8 @@ var upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numberStr = '0123456789';
 var symbolStr = '@%+"/\'!#$^?:,)(}{][~-_.';
 
-var combinedArr = [];
-var password = [];
+var combinedStr = '';
+var password = '';
 
 // Example
 // var combinedArr = uppercase.concat(numbers, lowercase, symbols);
@@ -29,22 +29,34 @@ var password = [];
 if ((lowerInput !== true) && (upperInput !== true) && (numberInput !== true) && (symbolInput !== true)) {
   alert("You must select at least one criteria!");
 } 
-else if (lowerInput === true) {
-  combinedArr = combinedArr.concat(lowerInput);
+if (lowerInput === true) {
+  combinedStr = combinedStr.concat(lowerStr);
+}
+if (upperInput === true) {
+  combinedStr = combinedStr.concat(upperStr);
+}
+if (numberInput === true) {
+  combinedStr = combinedStr.concat(numberStr);
+}
+if (symbolInput === true) {
+  combinedStr = combinedStr.concat(symbolStr);
 }
 
-// function generatePassword() {
+console.log(combinedStr);
+
+function generatePassword() {
       // combinedArr = combinedArr.concat(lowerStr, upperStr);
 
 // Based on length chosen, create for loop that loops # of length times and randomly pulls from master array & pushes into a new "array" for pw
 for (var i=0; i < lengthInput; i++) {
-  password.push(Math.floor(Math.random) * combinedArr.length)
+  password.push(Math.floor(Math.random) * combinedStr.length)
 }
-// }
+return password;
+}
 // Print the pw to the box
 
 
-console.log(password);
+generatePassword;
 
  
   // If no criteria selected, then return error
