@@ -20,6 +20,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // User clicks button
 // Prompt user to select password criteria
+var lengthInput = prompt("What is the length of your password?")
 // prompt("Select criteria for your password:")
 
 // User selects pw criteria:
@@ -28,9 +29,25 @@ generateBtn.addEventListener("click", writePassword);
 
 // After user answers each prompt, the input should be validated and at least one character type should be selected
 
+// After all prompts are answered, pw is generated that matches the selected criteria
 var lowerStr = 'abcdefghijklmnopqrstuvwxyz';
 var upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var symbolStr = ['@', '%', '+', '', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
+
+var randomLower = lowerStr.charAt(Math.floor(Math.random() * 26));
+var randomUpper = upperStr.charAt(Math.floor(Math.random() * 26));
+var randomSymbol = symbolStr[(Math.floor(Math.random() * symbolStr.length))];
+var randomNumber = Math.floor(Math.random() * 10);
+
+var charArr = [randomLower, randomUpper, randomSymbol, randomNumber];
+
+var password = "";
+
+for (var i=1; i <= lengthInput; i++) {
+  password = password + (charArr[Math.floor(Math.random() * 4)]);
+}
+
+console.log(password);
 
 // function check () {
 //   document.getElementById("pwLower").checked
@@ -41,25 +58,9 @@ var symbolStr = ['@', '%', '+', '', '/', "'", '!', '#', '$', '^', '?', ':', ',',
 
 // function generatePassword(); 
 
-console.log(lowerStr.charAt(
-  Math.floor(
-    Math.random() * 26)
-    ));
+// console.log(randomLower);
+// console.log(randomUpper);
+// console.log(randomSymbol);
+// console.log(randomNumber);
 
-console.log(upperStr.charAt(
-  Math.floor(
-    Math.random() * 26)
-    ));
-
-console.log(symbolStr[(
-  Math.floor(
-    Math.random() * symbolStr.length)
-    )]);
-
-console.log(Math.floor(
-    Math.random() * 10)
-    );
-
-
-// After all prompts are answered, pw is generated that matches the selected criteria
 // Display pw as either an alert or written on pg
