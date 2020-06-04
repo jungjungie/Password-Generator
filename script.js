@@ -26,12 +26,12 @@ var password = [];
       // If select numbers, push numberStr into combinedArr
       // If select symbols, push symbolStr into combinedArr
 
-if ((lowerStr !== true) && (upperStr !== true) && (numberStr !== true) && (symbolStr !== true)) {
+if ((lowerInput !== true) && (upperInput !== true) && (numberInput !== true) && (symbolInput !== true)) {
   alert("You must select at least one criteria!");
 } 
-// else if (lowerInput === true) {
-//   combinedArr = combinedArr.concat(lowerInput);
-// }
+else if (lowerInput === true) {
+  combinedArr = combinedArr.concat(lowerInput);
+}
 
 // function generatePassword() {
       // combinedArr = combinedArr.concat(lowerStr, upperStr);
