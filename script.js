@@ -27,5 +27,36 @@ generateBtn.addEventListener("click", writePassword);
 // User selects lowercase, uppercase, numeric and/or special characters
 
 // After user answers each prompt, the input should be validated and at least one character type should be selected
+
+var lowerStr = 'abcdefghijklmnopqrstuvwxyz';
+var upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var symbolStr = ['@', '%', '+', '', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
+
+console.log(lowerStr.charAt(
+  Math.floor(
+    Math.random() * 26)
+    ));
+
+console.log(upperStr.charAt(
+  Math.floor(
+    Math.random() * 26)
+    ));
+
+console.log(symbolStr[(
+  Math.floor(
+    Math.random() * symbolStr.length)
+    )]);
+
+console.log(Math.floor(
+    Math.random() * 10)
+    );
+
+// function check () {
+//   document.getElementById("pwLower").checked
+// }
+// if (document.getElementById("pwLower").checked) {
+//   console.log(lowercaseStr.charAt(Math.floor(Math.random() * 26)));
+// }
+
 // After all prompts are answered, pw is generated that matches the selected criteria
 // Display pw as either an alert or written on pg
