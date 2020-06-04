@@ -12,7 +12,7 @@ var symbolInput = confirm("Do you want to include symbols?")
 var lowerStr = 'abcdefghijklmnopqrstuvwxyz';
 var upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numberStr = '0123456789';
-var symbolStr = ['@', '%', '+', '"', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
+var symbolStr = '@%+"/\'!#$^?:,)(}{][~-_.';
 
 var combinedArr = [];
 var password = [];
@@ -26,14 +26,21 @@ var password = [];
       // If select numbers, push numberStr into combinedArr
       // If select symbols, push symbolStr into combinedArr
 
-function generatePassword() {
-      combinedArr = combinedArr.concat(lowerStr, upperStr);
+if ((lowerStr !== true) && (upperStr !== true) && (numberStr !== true) && (symbolStr !== true)) {
+  alert("You must select at least one criteria!");
+} 
+// else if (lowerInput === true) {
+//   combinedArr = combinedArr.concat(lowerInput);
+// }
+
+// function generatePassword() {
+      // combinedArr = combinedArr.concat(lowerStr, upperStr);
 
 // Based on length chosen, create for loop that loops # of length times and randomly pulls from master array & pushes into a new "array" for pw
 for (var i=0; i < lengthInput; i++) {
   password.push(Math.floor(Math.random) * combinedArr.length)
 }
-}
+// }
 // Print the pw to the box
 
 
