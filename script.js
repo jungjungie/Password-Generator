@@ -20,7 +20,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // User clicks button
 // Prompt user to select password criteria
-prompt("Select criteria for your password:")
+// prompt("Select criteria for your password:")
 
 // User selects pw criteria:
 // Length must be at least 8 characters and no more than 128 characters

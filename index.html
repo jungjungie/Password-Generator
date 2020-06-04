@@ -9,9 +9,12 @@
   </head>
   <body>
     <div class="wrapper">
+
       <header>
         <h1>Password Generator</h1>
       </header>
+
+      <!-- Generate Password box -->
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
@@ -29,6 +32,42 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Pop-up criteria form -->
+    <form id="popup-criteria">
+
+      <!-- Criteria: Password length -->
+      <label for="pwlength">Password length:</label>
+      <input id="pwlength" name="length" type="range" min="8" max="128" step="1" required>
+      <br>
+
+      <!-- Criteria: Lowercase -->
+
+      <label for="pwlower">Lowercase:</label>
+      <input id="pwlower" name="checkbox" type="checkbox">
+      <br>
+      
+      <!-- Criteria: Uppercase -->
+      <label for="pwupper">Uppercase:</label>
+      <input id="pwupper" name="checkbox" type="checkbox">
+      <br>
+      
+      <!-- Criteria: Numbers -->
+      <label for="pwnumbers">Numbers:</label>
+      <input id="pwnumbers" name="checkbox" type="checkbox">
+      <br>
+      
+      <!-- Criteria: Special Characters -->
+      <label for="specialchar">Special Characters(!?@):</label>
+      <input id="specialchar" name="checkbox" type="checkbox">
+      <br>
+
+      <!-- Submit button -->
+      <input type="submit" value="Generate">
+
+    </form>
+
+
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
