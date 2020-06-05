@@ -8,7 +8,8 @@ var numberStr = '0123456789';
 var symbolStr = '@%+"/\'!#$^?:,)(}{][~-_.';
 
 // Function definition to display password to user
-function writePassword() {
+function writePassword(event) {
+  event.preventDefault()
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -17,32 +18,32 @@ function writePassword() {
 
 // Create pw based on length input and criteria selection
 function generatePassword() {
-  var combinedStr = '';
-  var password = '';
   
+  var combinedStr = '';
+  var passwordStr = '';
+
   if (document.getElementById('lowerInput').checked) {
     combinedStr = combinedStr.concat(lowerStr);
   }
-  if (upperInput.checked == true) {
+  if (document.getElementById('upperInput').checked) {
     combinedStr = combinedStr.concat(upperStr);
   }
-  if (numberInput.checked == true) {
+  if (document.getElementById('numberInput').checked) {
     combinedStr = combinedStr.concat(numberStr);
   }
-  if (symbolInput.checked == true) {
+  if (document.getElementById('symbolInput').checked) {
     combinedStr = combinedStr.concat(symbolStr);
   }
   
   for (var i=0; i < document.getElementById('lengthInput').value; i++) {
-    password = password + combinedStr.charAt(Math.floor(Math.random() * combinedStr.length));
+    passwordStr = passwordStr + combinedStr.charAt(Math.floor(Math.random() * combinedStr.length));
   }
   
-  return password;
+  return passwordStr;
 }
 
 // When button is clicked, writePassword runs
-generateBtn.addEventListener("click", writePassword());
-
+generateBtn.addEventListener("click", writePassword);
 
 
 
