@@ -22,6 +22,20 @@ function generatePassword() {
   var combinedStr = '';
   var passwordStr = '';
 
+  // Alert if no length input specified 
+  // if (document.getElementById('lengthInput') === null || document.getElementById('lengthInput') === "") {
+  //   alert("You must specify a password length.");
+  // }
+
+  // Alert if no criteria selected
+  // if (
+  // (document.getElementById('lowerInput').checked !== true) && 
+  // (document.getElementById('upperInput').checked !== true) && 
+  // (document.getElementById('numberInput').checked !== true) && 
+  // (document.getElementById('symbolInput').checked !== true)) {
+  //   return errorMsg;
+  //   // alert("You must select at least one criteria.");
+
   if (document.getElementById('lowerInput').checked) {
     combinedStr = combinedStr.concat(lowerStr);
   }
@@ -42,9 +56,23 @@ function generatePassword() {
   return passwordStr;
 }
 
+function errorMsg(event) {
+  var passwordText = document.querySelector("#password");
+
+  if (
+    (document.getElementById('lowerInput').checked !== true) && 
+    (document.getElementById('upperInput').checked !== true) && 
+    (document.getElementById('numberInput').checked !== true) && 
+    (document.getElementById('symbolInput').checked !== true)) {
+  passwordText.value = "You must select at least one criteria.";
+  }
+}
+
+console.log(errorMsg);
+
 // When button is clicked, writePassword runs
 generateBtn.addEventListener("click", writePassword);
-
+generateBtn.addEventListener("click", errorMsg);
 
 
 
