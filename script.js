@@ -59,12 +59,15 @@ function generatePassword() {
 function errorMsg(event) {
   var passwordText = document.querySelector("#password");
 
-  if (
+  if (document.getElementById('lengthInput').value === null || document.getElementById('lengthInput').value === "") {
+  passwordText.value = "ERROR: You must specify a password length.";
+  }
+  else if (
     (document.getElementById('lowerInput').checked !== true) && 
     (document.getElementById('upperInput').checked !== true) && 
     (document.getElementById('numberInput').checked !== true) && 
     (document.getElementById('symbolInput').checked !== true)) {
-  passwordText.value = "You must select at least one criteria.";
+  passwordText.value = "ERROR: You must select at least one criteria.";
   }
 }
 
