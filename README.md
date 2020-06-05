@@ -28,20 +28,20 @@ With JS, I coded out the following:
 <br>
 
 **Original Demo:**<br>
-![screenshot of original demo](images/original-demo2.png)
+![screenshot of original demo](images/original-demo2.pngstyle=centerme)
 <br>
 
 **Working Demo:** Error Message when no length specified:<br>
-![screenshot of error no length](images/error-no-length2.png)
+![screenshot of error no length](images/error-no-length2.pngstyle=centerme)
 <br>
 
 **Working Demo:** Error Message when length not between 8 and 128 characters:<br>
-![screenshot of error invalid length](images/error-invalid-length2.png)
+![screenshot of error invalid length](images/error-invalid-length2.pngstyle=centerme)
 <br>
 
 **Working Demo:** Error Message when no criteria checked off:<br>
-![screenshot of error no criteria checked](images/error-no-criteria2.png)
+![screenshot of error no criteria checked](images/error-no-criteria2.pngstyle=centerme)
 <br>
 
 **Working Demo:** With password generated:<br>
-![screenshot of working demo with password generated](images/working-demo2.png)
+![screenshot of working demo with password generated](images/working-demo2.pngstyle=centerme)

@@ -138,3 +138,8 @@ button:focus {
     font-size: 0.8rem;
   }
 }
+
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
