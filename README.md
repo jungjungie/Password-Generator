@@ -44,4 +44,5 @@ With JS, I coded out the following:
 <br>
 
 **Working Demo:** With password generated:
+<br>
 ![screenshot of working demo with password generated](images/workingdemo.png)
