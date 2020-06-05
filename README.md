@@ -27,21 +27,21 @@ With JS, I coded out the following:
 <br>
 <br>
 
-**Original Demo:**
-![screenshot of original demo](images/originaldemo.png)
+**Original Demo:**<br>
+![screenshot of original demo](images/original-demo2.png)
 <br>
 
-**Working Demo:** Error Message when no length specified:
+**Working Demo:** Error Message when no length specified:<br>
 ![screenshot of error no length](images/error-no-length2.png)
 <br>
 
-**Working Demo:** Error Message when length not between 8 and 128 characters:
+**Working Demo:** Error Message when length not between 8 and 128 characters:<br>
 ![screenshot of error invalid length](images/error-invalid-length2.png)
 <br>
 
-**Working Demo:** Error Message when no criteria checked off:
+**Working Demo:** Error Message when no criteria checked off:<br>
 ![screenshot of error no criteria checked](images/error-no-criteria2.png)
 <br>
 
-**Working Demo:** With password generated:
+**Working Demo:** With password generated:<br>
 ![screenshot of working demo with password generated](images/working-demo2.png)
