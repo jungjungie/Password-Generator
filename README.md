@@ -32,17 +32,16 @@ With JS, I coded out the following:
 <br>
 
 **Working Demo:** Error Message when no length specified:
-![screenshot of error no length](images/error-no-length.png)
+![screenshot of error no length](images/error-no-length2.png)
 <br>
 
 **Working Demo:** Error Message when length not between 8 and 128 characters:
-![screenshot of error invalid length](images/error-invalid-length.png)
+![screenshot of error invalid length](images/error-invalid-length2.png)
 <br>
 
 **Working Demo:** Error Message when no criteria checked off:
-![screenshot of error no criteria checked](images/error-no-criteria.png)
+![screenshot of error no criteria checked](images/error-no-criteria2.png)
 <br>
 
 **Working Demo:** With password generated:
-<br>
-![screenshot of working demo with password generated](images/workingdemo.png)
+![screenshot of working demo with password generated](images/working-demo2.png)
