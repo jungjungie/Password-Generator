@@ -32,7 +32,6 @@ header {
 }
 
 .card {
-  /* background-color: #051094; */
   background-image: linear-gradient(to bottom right, #222, #878787);
   border-radius: 5px;
   border-width: 1px;
@@ -117,7 +116,6 @@ button:focus {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
   border-radius: 6px;
   resize: none;
   overflow: hidden;

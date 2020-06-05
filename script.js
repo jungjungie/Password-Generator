@@ -15,7 +15,6 @@ function writePassword(event) {
 
   passwordText.value = password;
   passwordText.style.color = "#222222";
-  // passwordText.style.fontFamily = "Roboto Mono", monospace;
 }
 
 // Create pw based on length input and criteria selection
@@ -44,6 +43,7 @@ function generatePassword() {
   return passwordStr;
 }
 
+// Create error messages if length not specified, length requirements not met, or if no ceriteria specified
 function errorMsg(event) {
   var passwordText = document.querySelector("#password");
 
@@ -66,6 +66,6 @@ function errorMsg(event) {
   }
 }
 
-// When button is clicked, writePassword runs
+// When button is clicked, writePassword & errorMsg runs
 generateBtn.addEventListener("click", writePassword);
 generateBtn.addEventListener("click", errorMsg);
