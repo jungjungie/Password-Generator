@@ -1,11 +1,11 @@
 // Assigns button to variable generateBtn
 var generateBtn = document.querySelector("#generate");
 
-var lengthInput = prompt("What is the length of your password?")
-var lowerInput = confirm("Do you want to include lowercase?")
-var upperInput = confirm("Do you want to include uppercase?")
-var numberInput = confirm("Do you want to include numbers?")
-var symbolInput = confirm("Do you want to include symbols?")
+// var lengthInput = prompt("What is the length of your password?")
+// var lowerInput = confirm("Do you want to include lowercase?")
+// var upperInput = confirm("Do you want to include uppercase?")
+// var numberInput = confirm("Do you want to include numbers?")
+// var symbolInput = confirm("Do you want to include symbols?")
 
 // Possible password characters
 var lowerStr = 'abcdefghijklmnopqrstuvwxyz';
@@ -65,7 +65,7 @@ function generatePassword() {
 console.log(generatePassword());
 
 // Calls the function to display password to user
-writePassword();
+// writePassword();
  
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword());
