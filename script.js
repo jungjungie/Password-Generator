@@ -60,17 +60,17 @@ function errorMsg(event) {
   var passwordText = document.querySelector("#password");
 
   if (document.getElementById('lengthInput').value === null || document.getElementById('lengthInput').value === "") {
-    passwordText.value = "ERROR:\nYou must specify a password length";
+    passwordText.value = "ERROR:\n\nYou must specify a password length";
   }
-  else if (document.getElementById('lengthInput').value < 8 || document.getElementById('lengthInput').value > 129) {
-    passwordText.value = "ERROR:\nPassword must be between 8 and 128 characters";
+  else if (document.getElementById('lengthInput').value < 8 || document.getElementById('lengthInput').value > 128) {
+    passwordText.value = "ERROR:\n\nPassword must be between 8 and 128 characters";
   }
   else if (
     (document.getElementById('lowerInput').checked !== true) && 
     (document.getElementById('upperInput').checked !== true) && 
     (document.getElementById('numberInput').checked !== true) && 
     (document.getElementById('symbolInput').checked !== true)) {
-      passwordText.value = "ERROR\nYou must select at least one criteria";
+      passwordText.value = "ERROR:\n\nYou must select at least one criteria";
   }
 }
 

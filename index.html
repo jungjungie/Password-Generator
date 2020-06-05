@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,29 +27,35 @@
           <form id="criteria-form">
 
             <!-- Criteria: Password length -->
-            <label for="lengthInput">Password length:</label>
-            <input id="lengthInput" name="length" type="number" min="8" max="128">
-            <br>
+            <div class="layout">
+              <label for="lengthInput">Password length</label>
+              <input id="lengthInput" name="length" type="number" min="8" max="128">
+            </div>
 
             <!-- Criteria: Lowercase -->
-            <label for="lowerInput">Lowercase:</label>
-            <input id="lowerInput" name="lowercase" type="checkbox">
-            <br>
+            <div class="layout">
+              <label for="lowerInput">Include Lowercase</label>
+              <input id="lowerInput" name="lowercase" type="checkbox">
+            </div>
             
             <!-- Criteria: Uppercase -->
-            <label for="upperInput">Uppercase:</label>
-            <input id="upperInput" name="uppercase" type="checkbox">
-            <br>
+            <div class="layout">
+              <label for="upperInput">Include Uppercase</label>
+              <input id="upperInput" name="uppercase" type="checkbox">
+            </div>
             
             <!-- Criteria: Numbers -->
-            <label for="numberInput">Numbers:</label>
-            <input id="numberInput" name="numbers" type="checkbox">
-            <br>
+            <div class="layout">
+              <label for="numberInput">Include Numbers</label>
+              <input id="numberInput" name="numbers" type="checkbox">
+            </div>
             
             <!-- Criteria: Symbols -->
-            <label for="symbolInput">Symbols(!?@):</label>
-            <input id="symbolInput" name="symbols" type="checkbox">
-            <br>
+            <div class="layout">
+              <label for="symbolInput">Include Symbols (!?@)</label>
+              <input id="symbolInput" name="symbols" type="checkbox">
+            </div>>
+          </form>
 
           <textarea
             readonly

@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #f9fbfd;
 }
 
@@ -24,46 +24,43 @@ body {
 }
 
 header {
+  font-size: 1.1em;
   text-align: center;
-  padding: 20px;
+  padding: 0px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: #ff5c5c;
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  /* background-color: #051094; */
+  background-image: linear-gradient(to bottom right, #222, #878787);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 500px;
   padding: 30px 40px;
 }
 
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+.card-header, label {
+  color: white;
+  font-size: 0.9em;
 }
 
 .card-body {
   min-height: 100px;
 }
 
-.card-footer {
-  text-align: center;
+.layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+.card-footer {
+  text-align: center;
 }
 
 .card-footer::after {
@@ -74,8 +71,8 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
+  background-color: #ff5c5c;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -91,6 +88,14 @@ header {
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}
+
+button:hover {
+  background: #FF6D6D;
+}
+
+button:focus {
+  outline: none;
 }
 
 .float-right {
