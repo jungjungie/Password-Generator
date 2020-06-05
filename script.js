@@ -20,7 +20,9 @@ var combinedStr = '';
 var password = '';
 
 // Push characters into master array based on user selections
-if ((lowerInput !== true) && (upperInput !== true) && (numberInput !== true) && (symbolInput !== true)) {
+if (lengthInput === null || lengthInput === "") {
+  alert("You must specify a password length.");
+} else if ((lowerInput !== true) && (upperInput !== true) && (numberInput !== true) && (symbolInput !== true)) {
   alert("You must select at least one criteria!");
 } 
 if (lowerInput === true) {

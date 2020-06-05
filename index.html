@@ -33,4 +33,41 @@
       </div>
     </div>
 
-    
+    <!-- Pop-up criteria form -->
+    <form id="popup-criteria">
+
+      <!-- Criteria: Password length -->
+      <label for="pwlength">Password length:</label>
+      <input id="pwlength" name="length" type="range" min="8" max="128" step="1" required>
+      <br>
+
+      <!-- Criteria: Lowercase -->
+
+      <label for="lowerCheck" onclick="writePassword()">Lowercase:</label>
+      <input id="lowerCheck" name="checkbox" type="checkbox">
+      <br>
+      
+      <!-- Criteria: Uppercase -->
+      <label for="upperCheck" onclick="writePassword()">Uppercase:</label>
+      <input id="upperCheck" name="checkbox" type="checkbox">
+      <br>
+      
+      <!-- Criteria: Numbers -->
+      <label for="numberCheck" onclick="writePassword()">Numbers:</label>
+      <input id="numberCheck" name="checkbox" type="checkbox">
+      <br>
+      
+      <!-- Criteria: Symbols -->
+      <label for="symbolCheck" onclick="writePassword()">Symbols(!?@):</label>
+      <input id="symbolCheck" name="checkbox" type="checkbox">
+      <br>
+
+      <!-- Submit button -->
+      <button onclick="generatePassword()">Generate Password</button>
+
+    </form>
+
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
