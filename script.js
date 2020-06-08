@@ -43,7 +43,7 @@ function generatePassword() {
   return passwordStr;
 }
 
-// Create error messages if length not specified, length requirements not met, or if no ceriteria specified
+// Create error messages if length not specified, length requirements not met, or if no criteria specified
 function errorMsg(event) {
   var passwordText = document.querySelector("#password");
 
@@ -63,6 +63,16 @@ function errorMsg(event) {
     (document.getElementById('symbolInput').checked !== true)) {
       passwordText.value = "ERROR:\n\nYou must select at least one criteria";
       passwordText.style.color = "#ff5c5c";
+  }
+}
+
+function showHide() {
+  var x = document.getElementById('entire-form');
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }  
+  else {
+    x.style.display = "block"
   }
 }
 
