@@ -32,7 +32,7 @@ With JS, I coded out the following:
 <br>
 
 **Working Demo:** Error Message when no length specified:<br>
-![screenshot of error no length](images/error-no-length2.png)
+![screenshot of error no length](images/no-length.png)
 <br>
 
 **Working Demo:** Error Message when length not between 8 and 128 characters:<br>

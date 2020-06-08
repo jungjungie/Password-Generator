@@ -50,7 +50,7 @@ function errorMsg(event) {
   if (document.getElementById('lengthInput').value === null || document.getElementById('lengthInput').value === "") {
     passwordText.value = "Specify a password length between 8 and 128 characters.";
     passwordText.style.color = "#ff5c5c";
-    passwordText.style.fontFamily = "Roboto Mono", monospace;
+    passwordText.style.fontFamily = "Roboto Mono";
   }
   else if (document.getElementById('lengthInput').value < 8 || document.getElementById('lengthInput').value > 128) {
     passwordText.value = "ERROR:\n\nPassword must be between 8 and 128 characters";
