@@ -48,7 +48,7 @@ function errorMsg(event) {
   var passwordText = document.querySelector("#password");
 
   if (document.getElementById('lengthInput').value === null || document.getElementById('lengthInput').value === "") {
-    passwordText.value = "ERROR:\n\nYou must specify a password length";
+    passwordText.value = "Specify a password length between 8 and 128 characters.";
     passwordText.style.color = "#ff5c5c";
     passwordText.style.fontFamily = "Roboto Mono", monospace;
   }
@@ -66,6 +66,7 @@ function errorMsg(event) {
   }
 }
 
+// Selection criteria is hidden when page is first opened. Clicking the 'Generate Password' button shows the criteria.
 function showHide() {
   var x = document.getElementById('entire-form');
   if (x.style.display === "none") {
