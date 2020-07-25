@@ -2,84 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Password Generator</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Password Generator</title>
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="wrapper">
+	<div class="wrapper">
 
-    <header>
-      <h1>Password Generator</h1>
-    </header>
+		<header>
+			<h1>Password Generator</h1>
+		</header>
 
-    <!-- Generate Password box -->
-    <div class="card">
-      <div id="entire-form">
-        <div class="card-header">
-          <h2>Select your criteria:</h2>
-        </div>
-        <div class="card-body">
+		<!-- Generate Password box -->
+		<section class="card">
+			<div id="entire-form">
+				<div class="card-header">
+					<h2>Select your criteria:</h2>
+				</div>
+				<div class="card-body">
 
-          <!-- Criteria Selection Form -->
-          <form id="criteria-form">
+					<!-- Criteria Selection Form -->
+					<form id="criteria-form">
 
-            <!-- Criteria: Password length -->
-            <div class="layout">
-              <label for="lengthInput">Password length</label>
-              <input id="lengthInput" name="length" type="number" min="8" max="128">
-            </div>
+						<!-- Criteria: Password length -->
+						<div class="layout">
+							<label for="lengthInput">Password length</label>
+							<input id="lengthInput" name="length" type="number" min="8" max="128">
+						</div>
 
-            <!-- Criteria: Lowercase -->
-            <div class="layout">
-              <label for="lowerInput">Include Lowercase</label>
-              <input id="lowerInput" name="lowercase" type="checkbox">
-            </div>
+						<!-- Criteria: Lowercase -->
+						<div class="layout">
+							<label for="lowerInput">Include Lowercase</label>
+							<input id="lowerInput" name="lowercase" type="checkbox">
+						</div>
 
-            <!-- Criteria: Uppercase -->
-            <div class="layout">
-              <label for="upperInput">Include Uppercase</label>
-              <input id="upperInput" name="uppercase" type="checkbox">
-            </div>
+						<!-- Criteria: Uppercase -->
+						<div class="layout">
+							<label for="upperInput">Include Uppercase</label>
+							<input id="upperInput" name="uppercase" type="checkbox">
+						</div>
 
-            <!-- Criteria: Numbers -->
-            <div class="layout">
-              <label for="numberInput">Include Numbers</label>
-              <input id="numberInput" name="numbers" type="checkbox">
-            </div>
+						<!-- Criteria: Numbers -->
+						<div class="layout">
+							<label for="numberInput">Include Numbers</label>
+							<input id="numberInput" name="numbers" type="checkbox">
+						</div>
 
-            <!-- Criteria: Symbols -->
-            <div class="layout">
-              <label for="symbolInput">Include Symbols (!?@)</label>
-              <input id="symbolInput" name="symbols" type="checkbox">
-            </div>>
-          </form>
+						<!-- Criteria: Symbols -->
+						<div class="layout">
+							<label for="symbolInput">Include Symbols (!?@)</label>
+							<input id="symbolInput" name="symbols" type="checkbox">
+						</div>>
+					</form>
 
-          <textarea readonly id="password" placeholder="Your Secure Password"
-            aria-label="Generated Password"></textarea>
-        </div>
-      </div>
-      
-      <!-- Button -->
-      <div class="card-footer">  
-        <button id="generate" class="btn" onclick="showHide()">Generate Password</button>
-      </div>
-      
-    </div>
-  </div>
+					<textarea readonly id="password" placeholder="Your Secure Password"
+						aria-label="Generated Password"></textarea>
+				</div>
+			</div>
 
+			<!-- Button -->
+			<div class="card-footer">
+				<button id="generate" class="btn">Generate Password</button>
+			</div>
 
+	</div>
+	</section>
 
-  </form>
-
-
-  <script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
