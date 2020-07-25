@@ -1,62 +1,7 @@
 // 'Generate Password' button
 let generateBtn = document.querySelector('#generate');
 
-// Possible password characters
-let lowerStr = 'abcdefghijklmnopqrstuvwxyz';
-let upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-let numberStr = '0123456789';
-let symbolStr = "@%+'!#$^?:,)(}{][~-_.";
-let passwordStr = '';
-let includesLowercase = false;
-let includesUppercase = false;
-let includesNumber = false;
-let includesSymbol = false;
-
-// Function to display password to user
-function writePassword(event) {
-	event.preventDefault()
-
-	let password = generatePassword();
-	let passwordText = document.querySelector('#password');
-
-	passwordText.value = password;
-	passwordText.style.color = '#222222';
-}
-
-// Function to create pw based on length input and criteria selection
-function generatePassword() {
-	let combinedStr = '';
-	passwordStr = ''
-
-	typeArr.map(obj => {
-		return {
-			...obj,
-			included: false,
-		}
-	})
-
-	if (document.getElementById('lowerInput').checked) {
-		combinedStr = combinedStr.concat(lowerStr);
-	}
-	if (document.getElementById('upperInput').checked) {
-		combinedStr = combinedStr.concat(upperStr);
-	}
-	if (document.getElementById('numberInput').checked) {
-		combinedStr = combinedStr.concat(numberStr);
-	}
-	if (document.getElementById('symbolInput').checked) {
-		combinedStr = combinedStr.concat(symbolStr);
-	}
-
-	for (let i = 0; i < document.getElementById('lengthInput').value; i++) {
-		passwordStr = passwordStr + combinedStr.charAt(Math.floor(Math.random() * combinedStr.length));
-	}
-
-	checkPassword();
-	return passwordStr;
-}
-
-// Array of character types to select from
+// Array of selection criteria
 const typeArr = [ 
 	{
 		charList: 'abcdefghijklmnopqrstuvwxyz',
@@ -75,6 +20,43 @@ const typeArr = [
 		input: 'symbolInput'
 	}
 ]
+
+// Function to display password to user
+function writePassword(event) {
+	event.preventDefault()
+
+	let password = generatePassword();
+	let passwordText = document.querySelector('#password');
+
+	passwordText.value = password;
+	passwordText.style.color = '#222222';
+}
+
+// Function to create pw based on length input and criteria selection
+function generatePassword() {
+	let combinedStr = '';
+	passwordStr = ''
+
+	if (document.getElementById('lowerInput').checked) {
+		combinedStr = combinedStr.concat(typeArr[0].charList);
+	}
+	if (document.getElementById('upperInput').checked) {
+		combinedStr = combinedStr.concat(typeArr[1].charList);
+	}
+	if (document.getElementById('numberInput').checked) {
+		combinedStr = combinedStr.concat(typeArr[2].charList);
+	}
+	if (document.getElementById('symbolInput').checked) {
+		combinedStr = combinedStr.concat(typeArr[3].charList);
+	}
+
+	for (let i = 0; i < document.getElementById('lengthInput').value; i++) {
+		passwordStr = passwordStr + combinedStr.charAt(Math.floor(Math.random() * combinedStr.length));
+	}
+
+	checkPassword();
+	return passwordStr;
+}
 
 // Checks to see if selected criteria are all in the generated password, else it generates another password
 function checkPassword() {
