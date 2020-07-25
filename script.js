@@ -5,7 +5,12 @@ let generateBtn = document.querySelector('#generate');
 let lowerStr = 'abcdefghijklmnopqrstuvwxyz';
 let upperStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let numberStr = '0123456789';
-let symbolStr = '@%+/\'!#$^?:,)(}{][~-_.';
+let symbolStr = "@%+'!#$^?:,)(}{][~-_.";
+let passwordStr = '';
+let includesLowercase = false;
+let includesUppercase = false;
+let includesNumber = false;
+let includesSymbol = false;
 
 // Function to display password to user
 function writePassword(event) {
@@ -21,7 +26,14 @@ function writePassword(event) {
 // Function to create pw based on length input and criteria selection
 function generatePassword() {
 	let combinedStr = '';
-	let passwordStr = '';
+	passwordStr = ''
+
+	typeArr.map(obj => {
+		return {
+			...obj,
+			included: false,
+		}
+	})
 
 	if (document.getElementById('lowerInput').checked) {
 		combinedStr = combinedStr.concat(lowerStr);
@@ -36,15 +48,44 @@ function generatePassword() {
 		combinedStr = combinedStr.concat(symbolStr);
 	}
 
-	for (let i=0; i < document.getElementById('lengthInput').value; i++) {
+	for (let i = 0; i < document.getElementById('lengthInput').value; i++) {
 		passwordStr = passwordStr + combinedStr.charAt(Math.floor(Math.random() * combinedStr.length));
 	}
 
-	// if (!passwordStr.includes()) {
-
-	// }
-
+	checkPassword();
 	return passwordStr;
+}
+
+// Array of character types to select from
+const typeArr = [ 
+	{
+		charList: 'abcdefghijklmnopqrstuvwxyz',
+		input: 'lowerInput'
+	}, 
+	{
+		charList: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+		input: 'upperInput'
+	},
+	{
+		charList: '0123456789',
+		input: 'numberInput'
+	},
+	{
+		charList: "@%+'!#$^?:,)(}{][~-_.",
+		input: 'symbolInput'
+	}
+]
+
+// Checks to see if selected criteria are all in the generated password, else it generates another password
+function checkPassword() {
+	typeArr.forEach(obj => {
+		if (document.getElementById(obj.input).checked) {
+			const indx = obj.charList.split("").findIndex(char => passwordStr.includes(char));
+			if (indx === -1){
+				generatePassword();
+			}
+		}
+	})
 }
 
 // Function to create error messages if length not specified, length requirements not met, or if no criteria specified
